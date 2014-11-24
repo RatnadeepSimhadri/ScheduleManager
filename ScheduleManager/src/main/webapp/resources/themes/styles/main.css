@@ -2,9 +2,43 @@ h1{
 	color:red;
 }
 
-body{
-		font: 80% "Trebuchet MS", sans-serif;
-		margin: 50px;
+img{
+	opacity: 0.5;
+}
+
+body {
+		
+    background-image: url('../images/calendar.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%; 
+	font: 80% "Trebuchet MS", sans-serif;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 50px;
+}
+
+#headerImage{
+	opacity:0.7;
+}
+
+.label{
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	color:#F4670E;
+	font-weight:bold;
+	font-size:1.3em
+}
+
+.content {
+	
+margin: auto;
+max-width: 1024px;
+min-width: 800px;
+height: 300px;
+text-align:center;
+
 }
 .demoHeaders {
 		margin-top: 2em;

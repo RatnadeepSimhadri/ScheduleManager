@@ -1,13 +1,10 @@
-<html>
-<head>
+
 <link href="${pageContext.request.contextPath}/resources/styles/main.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/styles/jquery-ui.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath}/resources/scripts/jquery.1.10.2.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/scripts/main.js" /></script>
 <script src="${pageContext.request.contextPath}/resources/scripts/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/resources/scripts/jquery-ui.js"></script>
-
-</head>
 <body>
 <div id="tabs">
 	<ul>
@@ -19,8 +16,9 @@
 	<div id="tabs-2">Tab 2 - Data</div>
 	<div id="tabs-3">Tab 3 - Data</div>
 </div>
+
+
 <script>
 $( "#tabs" ).tabs();
 </script>	
 </body>
-</html>
