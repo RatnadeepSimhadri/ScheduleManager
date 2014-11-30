@@ -9,6 +9,7 @@
 
 	<properties>
 		<spring.version>3.0.5.RELEASE</spring.version>
+		<jstl.version>1.2</jstl.version>
 	</properties>
 
 	<dependencies>
@@ -34,9 +35,9 @@
 
 		<!-- jstl -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
+			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${jstl.version}</version>
 		</dependency>
 
 	</dependencies>

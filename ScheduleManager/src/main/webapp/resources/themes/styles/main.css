@@ -31,12 +31,19 @@ body {
 	font-size:1.3em
 }
 
+.radio-label{
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	color:#0E919D;
+	font-weight:bold;
+	font-size:1em
+}
+
 .content {
 	
 margin: auto;
 max-width: 1024px;
 min-width: 800px;
-height: 300px;
+height: auto;
 text-align:center;
 
 }
@@ -76,5 +83,12 @@ text-align:center;
 }
 select {
 		width: 200px;
+}
+
+#footer {
+width: 1300px;
+padding-bottom: 1em;
+color: #500000;
+font-size: 80%;
 }
 	
