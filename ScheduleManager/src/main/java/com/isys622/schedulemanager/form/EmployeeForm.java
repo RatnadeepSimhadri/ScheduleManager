@@ -11,10 +11,13 @@ public class EmployeeForm {
 	private String lastName;
 	private AddressVO address;
 	private String email;
-	private Integer phone;
+	private Long phone;
 	private String role;
 	private String option;
 	private String gender;
+	private String username;
+	private String password;
+	private int lab;
 
 	public String getOption() {
 		return option;
@@ -72,11 +75,11 @@ public class EmployeeForm {
 		this.email = email;
 	}
 
-	public Integer getPhone() {
+	public Long getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
 
@@ -94,6 +97,30 @@ public class EmployeeForm {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getLab() {
+		return lab;
+	}
+
+	public void setLab(int lab) {
+		this.lab = lab;
 	}
 	
 	

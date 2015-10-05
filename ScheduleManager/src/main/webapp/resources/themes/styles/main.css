@@ -31,6 +31,13 @@ body {
 	font-size:1.3em
 }
 
+.heading-label{
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	color:#2191c0 ;
+	font-weight:bold;
+	font-size:1.3em
+}
+
 .radio-label{
 	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
 	color:#0E919D;

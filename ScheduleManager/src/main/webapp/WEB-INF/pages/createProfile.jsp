@@ -4,7 +4,7 @@
  
     <table style="padding-top:20px;" align="center">
     <tr>
-        <td colspan="2"><form:label class="label" path="option">Select an Option</form:label></td>
+        <td colspan="2"><form:label class="label" path="option">Select an option</form:label></td>
     </tr>
     <tr>
     <td height="20"></td>
@@ -12,7 +12,6 @@
     </tr>
     <tr>
         <td><form:radiobutton path="option" value="C"/><label class="radio-label">Create Employee Profile</label></td>
-        <td><form:radiobutton path="option" value="U"/><label class="radio-label">Update Employee Profile</label></td>
     </tr>
     <tr>
     <td height="20"></td>
@@ -31,4 +30,5 @@
 $(function() {
 	 $("#date").datepicker();
 });
+
 </script>

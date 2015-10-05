@@ -6,12 +6,12 @@ import java.util.Map;
 
 public class CreateShiftForm {
 
-	private String lab;
+	private int lab;
 	private Date date;
-	public String getLab() {
+	public int getLab() {
 		return lab;
 	}
-	public void setLab(String lab) {
+	public void setLab(int lab) {
 		this.lab = lab;
 	}
 	public Date getDate() {

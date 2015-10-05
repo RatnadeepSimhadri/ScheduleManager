@@ -4,7 +4,7 @@
  
     <table style="padding-top:20px;" align="center">
     <tr>
-        <td><form:label class="label" path="name">First Name :</form:label></td>
+        <td><form:label class="label" path="name">Employee First Name :</form:label></td>
         <td><form:input id ="name" path="name" /></td> 
     </tr>
     <tr>
@@ -13,7 +13,7 @@
     </tr>
     <tr>
         <td><form:label class="label" path="date">Date :</form:label></td>
-        <td><form:password id="date" path="date" /></td>
+        <td><form:input id="date" path="date" /></td>
     </tr>
     <tr>
     <td height="20"></td>
@@ -21,7 +21,7 @@
     </tr>	
     <tr>
         <td  colspan="2" style="text-align:center;">
-            <input id="searchSchedule" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="searchSchedule()" value="Search"/>
+            <input id="searchSchedule" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="searchScheduleDetails()" value="Search"/>
         </td>
         
     </tr>

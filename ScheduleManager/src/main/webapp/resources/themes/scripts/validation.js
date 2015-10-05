@@ -41,17 +41,41 @@ function loadCreateProfile(){
 	
 }
 
+function searchScheduleDetails(){
+	$("#searchSchedule").submit();
+}
+
+function loadCreateLabProfile(){
+	$("#loadCreateLabProfile").submit();
+	
+}
+
 function saveProfile(){
+	
 	$("#createProfile").submit();
+}
+
+function saveLabProfile(){
+	$("#createLabProfile").submit();
 }
 
 function loadAssignShift(){
 	$("#loadAssignShift").submit();
 }
 
+function configureShifts(){
+	$("#configureShifts").submit();
+}
+
 function saveShifts(){
-		
-	$('#saveShifts').append('<input type="hidden" name="token" value="1" />');
+	
+	var size = $('#size').val();
+	for(i=1;i<=size;i++){
+	var id = document.getElementById('employee_'+i+'shift_'+i).value;	
+	$('#saveShifts').append('<input type="hidden" name="shift'+i+'" value="'+id+'" />');
+	}
+	
+	$('#saveShifts').append('<input type="hidden" name="size" value="'+size+'" />');
 	$('#saveShifts').submit();
 }
 
@@ -61,3 +85,4 @@ function callback(resp){
 	$("#search").html(resp);
 	}
 }
+

@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.schedulemanager.common</groupId>
-	<packaging>ear</packaging>
+	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>ScheduleManager Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -10,6 +10,7 @@
 	<properties>
 		<spring.version>3.0.5.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
+		<java-vesion>1.7</java-vesion>
 	</properties>
 
 	<dependencies>
@@ -39,10 +40,32 @@
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
 		</dependency>
+		
+		<!-- JDBC Dependency for MAVEN TEST RUN -->
+  		<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.26</version>
+		</dependency>
+		
+		
+	
+	<!-- JUNIT Dependency for JUNIT RUN -->
+   	 <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+   	 </dependency>
 
+   	 <dependency>
+   	 	<groupId>javax.servlet</groupId>
+   	 	<artifactId>servlet-api</artifactId>
+   	 	<version>2.5</version>
+   	 </dependency>
 	</dependencies>
 
-	<build>
+	<!-- <build>
 		<finalName>ScheduleManager</finalName>
 		<plugins>
 			<plugin>
@@ -63,7 +86,107 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
+	
+	<build>
+	<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>sql-maven-plugin</artifactId>
+			<version>1.5</version>
+			<dependencies>
+				<dependency>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+					<version>5.1.32</version>
+				</dependency>
+			</dependencies>
+			<configuration>
+				<driver>com.mysql.jdbc.Driver</driver>
+				<url>jdbc:mysql://localhost:3306/</url>
+				<username>schedule_manager</username>
+				<password>p@ssw0rd</password>
+			</configuration>
+			<executions>
+				<execution>
+					<id>create-schema</id>
+					<phase>process-test-resources</phase>
+					<goals>
+						<goal>execute</goal>
+					</goals>
+					<configuration>
+						<delimiter>$</delimiter>
+						<autocommit>true</autocommit>
+						<onError>continue</onError>
+						<srcFiles>
+							<srcFile>src/test/scripts/schedulemanager-create.sql</srcFile>
+						</srcFiles>
+					</configuration>
+				</execution>
+				<execution>
+					<id>create-sp</id>
+					<phase>process-test-resources</phase>
+					<goals>
+						<goal>execute</goal>
+					</goals>
+					<configuration>
+						<delimiter>$</delimiter>
+						<autocommit>true</autocommit>
+						<onError>continue</onError>
+						<srcFiles>
+							<srcFile>src/test/scripts/schedule_manager-sp-create.sql</srcFile>
+						</srcFiles>
+					</configuration>
+				</execution>
+
+			</executions>
+
+		</plugin>
+	</plugins>
+	<pluginManagement>
+		<plugins>
+			<!--This plugin's configuration is used to store Eclipse m2e settings 
+				only. It has no influence on the Maven build itself. -->
+			<plugin>
+				<groupId>org.eclipse.m2e</groupId>
+				<artifactId>lifecycle-mapping</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<lifecycleMappingMetadata>
+						<pluginExecutions>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.codehaus.mojo
+									</groupId>
+									<artifactId>
+										sql-maven-plugin
+									</artifactId>
+									<versionRange>
+										[1.5,)
+									</versionRange>
+									<goals>
+										<goal>execute</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore></ignore>
+								</action>
+							</pluginExecution>
+						</pluginExecutions>
+					</lifecycleMappingMetadata>
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
+</build>
 
 	<artifactId>ScheduleManager</artifactId>
 </project>
