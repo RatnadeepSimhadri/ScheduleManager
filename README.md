@@ -1,6 +1,6 @@
-# Schedule Manager Repository
-This Repository has been created to facilitate development of Employee Schedule Management System 
-as part of Advanced Data Management Coursework 
+# Employee Schedule Manager 
+Employee Schedule Manager System has been created to help manage work schedules of employees at Texas A & M University
+This project has been developed as a part of Advanced Data Management Course
 
 ### UI Screen Shots:
 #### Login Page
