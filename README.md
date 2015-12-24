@@ -1,5 +1,7 @@
 # ScheduleManagerRepo
-This Repository has been created to facilitate code sharing and version control for
-the project implemented as part of ISYS 622 
+This Repository has been created to facilitate development of Employee Schedule Management System 
+as part of Advanced Data Management Coursework 
+
+
 
 
