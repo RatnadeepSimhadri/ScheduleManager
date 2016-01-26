@@ -10,11 +10,11 @@ Schedule Manager - An Employee Schedule Management System, has been developed to
 
 ### Technical Specifications:
 
-User Interface: JQuery , JSP , JavaScript
-Middle Tier : Java 
-Database : MySQL , Cassandra
-Build Tools: Maven
-Frameworks : Spring MVC , JDBC 
+##### User Interface: JQuery , JSP , JavaScript
+##### Middle Tier : Java 
+##### Database : MySQL , Cassandra
+##### Build Tools: Maven
+##### Frameworks : Spring MVC , JDBC 
 
 
 
