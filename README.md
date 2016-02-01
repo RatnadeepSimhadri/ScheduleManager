@@ -1,5 +1,5 @@
 # Schedule Manager 
-Schedule Manager - An Employee Schedule Management System, has been developed to help manage work schedules of  Open Access Labs Employees at Texas A & M University. This Application has been developed as a part of Advanced Data Management Coursework
+Schedule Manager - An Employee Work Schedule Management System, has been developed to help manage work schedules of  Open Access Labs Employees at Texas A & M University. This Application has been developed as a part of Advanced Data Management Coursework
 
 ### User Interface:
 #### Login Page
